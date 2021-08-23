@@ -111,37 +111,37 @@ class Button():
                         self.cooldown = 5
                         return True
 
-image = pygame.image.load("/home/fred/Python/Spidex/chose.png")
+image = pygame.image.load("chose.png")
 chose = pygame.transform.scale(image, (int(width / 10 * zoom), int(height / 10 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/food.png")
+image = pygame.image.load("food.png")
 food = pygame.transform.scale(image, (int(width / 10 * zoom), int(height / 10 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/health.png")
+image = pygame.image.load("health.png")
 health = pygame.transform.scale(image, (int(width / 10 * zoom), int(height / 10 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/joy.png")
+image = pygame.image.load("joy.png")
 joy = pygame.transform.scale(image, (int(width / 10 * zoom), int(height / 10 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/feedicon.png")
+image = pygame.image.load("feedicon.png")
 feedicon = pygame.transform.scale(image, (int(width / 5 * zoom), int(height / 5 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/feediconpressed.png")
+image = pygame.image.load("feediconpressed.png")
 feediconpressed = pygame.transform.scale(image, (int(width / 5 * zoom), int(height / 5 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/returnpressed.png")
+image = pygame.image.load("returnpressed.png")
 returniconpressed = pygame.transform.scale(image, (int(width / 10 * zoom), int(height / 10 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/return.png")
+image = pygame.image.load("return.png")
 returnicon = pygame.transform.scale(image, (int(width / 10 * zoom), int(height / 10 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/shop.png")
+image = pygame.image.load("shop.png")
 shopicon = pygame.transform.scale(image, (int(width / 5 * zoom), int(height / 5 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/shoppressed.png")
+image = pygame.image.load("shoppressed.png")
 shoppressed = pygame.transform.scale(image, (int(width / 5 * zoom), int(height / 5 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/extras.png")
+image = pygame.image.load("extras.png")
 extrasicon = pygame.transform.scale(image, (int(width / 5 * zoom), int(height / 5 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/extraspressed.png")
+image = pygame.image.load("extraspressed.png")
 extraspressed = pygame.transform.scale(image, (int(width / 5 * zoom), int(height / 5 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/store.png")
+image = pygame.image.load("store.png")
 storeicon = pygame.transform.scale(image, (int(width / 5 * zoom), int(height / 5 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/storepressed.png")
+image = pygame.image.load("storepressed.png")
 storepressed = pygame.transform.scale(image, (int(width / 5 * zoom), int(height / 5 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/shopper.png")
+image = pygame.image.load("shopper.png")
 shopper = pygame.transform.scale(image, (int(width / 5 * zoom), int(height / 5 * zoom)))
-image = pygame.image.load("/home/fred/Python/Spidex/coins.png")
+image = pygame.image.load("coins.png")
 coinimage = pygame.transform.scale(image, (int(width / 10 * zoom), int(height / 10 * zoom)))
 
 sprite = []
@@ -149,7 +149,7 @@ numbers = [1, 0, 6, 1, 4]
 for i in range(0, 5):
     sprite.append([])
     for o in range(0, numbers[i] + 1):
-        filename = "/home/fred/Python/Hexipus/" + str(i) + str(o) + ".png"
+        filename = str(i) + str(o) + ".png"
         image = pygame.image.load(filename)
         scale = 700
         sprite[i].append(pygame.transform.scale(image, (int(scale * zoom), int(scale * zoom))))
@@ -158,14 +158,14 @@ extramount = 0
 
 foods = []
 for i in range(9):
-    image = pygame.image.load("/home/fred/Python/Spidex/fd" + str(i) + ".png")
+    image = pygame.image.load("fd" + str(i) + ".png")
     foods.append(pygame.transform.scale(image, (int(width / 10 * zoom), int(height / 10 * zoom))))
 extras = []
 for i in range(extramount + 1):
-    image = pygame.image.load("/home/fred/Python/Spidex/ex" + str(i) + ".png")
+    image = pygame.image.load("ex" + str(i) + ".png")
     extras.append(pygame.transform.scale(image, (int(width / 10 * zoom), int(height / 10 * zoom))))
 
-data = open("/home/fred/Python/Spidex/data.txt", "r")
+data = open("data.txt", "r")
 fooddata = data.readline()
 healthdata = data.readline()
 joydata = data.readline()
@@ -400,7 +400,7 @@ while running:
     if not running:
         break
 
-data = open("/home/fred/Python/Spidex/data.txt", "w")
+data = open("data.txt", "w")
 
 if hexy.alive:
     data.write(str(int(hexy.food)) + "\n")
